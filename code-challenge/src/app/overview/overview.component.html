@@ -1,0 +1,32 @@
+<div class="container-fluid bg-3 text-center">
+  <div class="app">
+    <div class="content" action="/customer_data" method="GET">
+      <div class="page-submissions">
+      <div class="head">
+        <table class="header-container">
+          <tbody>
+            <tr class="header-row">
+              <td>Name</td>
+              <td>Email</td>
+              <td>Coordinates</td>
+              <td>IP Address</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="submissions">
+        <table class="table-container">
+          <tbody class="table-body">
+              <tr class="table-row body" *ngFor="let customer of customers" (click)="onCustomerClick(customer)">
+                <td>{{customer.first_name}}</td>
+                <td>{{customer.email}}</td>
+                <td>({{customer.latitude}}, {{customer.longitude}})</td>
+                <td>{{customer.ip}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
