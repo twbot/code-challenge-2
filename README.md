@@ -15,4 +15,4 @@ Simply run `python3 loadData.py ./datamap [password]` where password is the pass
 
 ## Web Service/JS Engineering & UI/UX Challenge Setup
 Ensure node is installed on your machine, then run `npm i` within the code-challenge directory.
-After all required packages are installed, run `node server.js [password]` where password is the password for root user of MySQL connection. If no password, run `node server.js`.
+After all required packages are installed, run `PASSWORD=[password] npm run start` where `password` is the password for root user of MySQL connection. If no password, run `PASSWORD= npm run start`.
