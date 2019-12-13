@@ -7,11 +7,17 @@ const port          = process.env.PORT || '4200';
 const server        = http.createServer(app);
 const mysql			= require('mysql');
 const args			= process.argv.slice(2);
+	
+let password = args[0];
+
+if(password == undefined){
+	password = '';
+}
 
 const connectionPool = mysql.createPool({
 							host: 'localhost',
 							user: 'root',
-							password: args[0],
+							password: password,
 							database: 'customers',
 							connectionLimit: 10
 						});
